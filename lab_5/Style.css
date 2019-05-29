@@ -1,0 +1,44 @@
+ul {
+    list-style: none; /*забираємо маркери списку*/
+    margin: 0; /*відступи*/
+    padding-left: 0;
+    margin-top:25px; /*відступ зверху*/
+    background:#2F4F4F; /*фон для меню*/
+    height: 50px; /*висота*/
+}
+a {
+    text-decoration: none; /*підкреслення тексту посилань*/
+    background:#2F4F4F;
+    color:#ffffff; /*колір тексту посилань*/
+    padding:0px 15px; /*добавляємо відступ*/
+    font-family: arial;
+    line-height:50px; /*рівняємо меню по вертикалі*/
+    display: block;
+    border-right: 1px solid #2F4F4F; /*добавляєм бардюр з правої сторони*/
+    -moz-transition: all 0.3s 0.01s ease; /*робимо плавний перехід*/
+    -o-transition: all 0.3s 0.01s ease;
+    -webkit-transition: all 0.3s 0.01s ease;
+}
+a:hover {
+    background:#D43737;/*еффект при наведенні*/
+}
+li {
+    float:left; /*Размещаем список горизонтально для випадаючого меню*/
+    position:relative; /*задаємо позицію для позиціювання*/
+}
+
+/*Стилі для випадаючого меню*/
+li > ul {
+    position:absolute;
+    top:25px;
+    display:none;
+}
+
+/*робимо видимою приховану частину меню*/
+li:hover > ul {
+    display:block;
+    width:250px;
+}
+li:hover > ul > li {
+    float:none; /*забираємо горизонтальне позиціювання*/
+}
